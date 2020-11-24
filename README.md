@@ -1,6 +1,6 @@
 # Graph Matching Networks
 
-This is a PyTorch re-implementation of the following ICML 2019 paper. If you use the code here please cite this paper.
+This is a PyTorch re-implementation of the following ICML 2019 paper. If you use the code here please give a star.
 
 > Yujia Li, Chenjie Gu, Thomas Dullien, Oriol Vinyals, Pushmeet Kohli. *Graph Matching Networks for Learning the Similarity of Graph Structured Objects*. ICML 2019. [[arXiv\]](https://arxiv.org/abs/1904.12787).
 
