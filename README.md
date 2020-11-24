@@ -14,7 +14,7 @@ numpy>=1.16.4
 
 six>=1.12
 
-## Training
+## Usage
 
 use `./run.sh` to run.
 
