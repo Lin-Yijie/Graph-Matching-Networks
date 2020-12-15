@@ -458,7 +458,6 @@ class GraphEmbeddingNet(nn.Module):
 
           share_prop_params: set to True to share propagation parameters across all
             graph propagation layers, False not to.
-          #  共享传播参数
           edge_net_init_scale: scale of initialization for the edge message nets.
           node_update_type: type of node updates, one of {mlp, gru, residual}.
           use_reverse_direction: set to True to also propagate messages in the
