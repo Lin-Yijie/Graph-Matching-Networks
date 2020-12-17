@@ -16,7 +16,7 @@ six>=1.12
 
 ## Usage
 
-The code is in the format of a colab notebook, which includes:
+The code includes:
 
 - an example implementation of the model,
 - an example graph similarity learning task,
