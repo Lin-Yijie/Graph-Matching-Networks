@@ -16,7 +16,14 @@ six>=1.12
 
 ## Usage
 
-use `./run.sh` to run.
+The code is in the format of a colab notebook, which includes:
+
+- an example implementation of the model,
+- an example graph similarity learning task,
+- an example training loop.
+
+
+Please use `./run.sh` to run.
 
 ## References:
 
