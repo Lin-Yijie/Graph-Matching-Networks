@@ -43,7 +43,7 @@ class GraphEncoder(nn.Module):
         if self._edge_hidden_sizes is not None:
             layer = []
             layer.append(nn.Linear(self._edge_feature_dim, self._edge_hidden_sizes[0]))
-            for i in range(1, len(self._node_hidden_sizes)):
+            for i in range(1, len(self._edge_hidden_sizes)):
                 layer.append(nn.ReLU())
                 layer.append(nn.Linear(self._edge_hidden_sizes[i - 1], self._edge_hidden_sizes[i]))
             self.MLP2 = nn.Sequential(*layer)
