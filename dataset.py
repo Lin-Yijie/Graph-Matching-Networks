@@ -225,9 +225,11 @@ class GraphEditDistanceDataset(GraphSimilarityDataset):
         return GraphData(
             from_idx=np.concatenate(from_idx, axis=0),
             to_idx=np.concatenate(to_idx, axis=0),
-            # this task only cares about the structures, the graphs have no features
-            node_features=np.ones((n_total_nodes, 1), dtype=np.float32),
-            edge_features=np.ones((n_total_edges, 1), dtype=np.float32),
+            # this task only cares about the structures, the graphs have no features.
+            # setting higher dimension of ones to confirm code functioning
+            # with high dimensional features.
+            node_features=np.ones((n_total_nodes, 8), dtype=np.float32),
+            edge_features=np.ones((n_total_edges, 4), dtype=np.float32),
             graph_idx=np.concatenate(graph_idx, axis=0),
             n_graphs=len(graphs),
         )
