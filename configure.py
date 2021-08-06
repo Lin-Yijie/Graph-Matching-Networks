@@ -3,9 +3,11 @@ def get_default_config():
     model_type = 'matching'
     # Set to `embedding` to use the graph embedding net.
     node_state_dim = 32
+    edge_state_dim = 16
     graph_rep_dim = 128
     graph_embedding_net_config = dict(
         node_state_dim=node_state_dim,
+        edge_state_dim=edge_state_dim,
         edge_hidden_sizes=[node_state_dim * 2, node_state_dim * 2],
         node_hidden_sizes=[node_state_dim * 2],
         n_prop_layers=5,
@@ -31,7 +33,7 @@ def get_default_config():
         encoder=dict(
             node_hidden_sizes=[node_state_dim],
             node_feature_dim=1,
-            edge_hidden_sizes=None),
+            edge_hidden_sizes=[edge_state_dim]),
         aggregator=dict(
             node_hidden_sizes=[graph_rep_dim],
             graph_transform_sizes=[graph_rep_dim],

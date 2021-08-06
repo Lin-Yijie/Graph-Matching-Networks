@@ -71,7 +71,7 @@ class GraphEncoder(nn.Module):
         if edge_features is None or self._edge_hidden_sizes is None:
             edge_outputs = edge_features
         else:
-            edge_outputs = self.MLP2(node_features)
+            edge_outputs = self.MLP2(edge_features)
 
         return node_outputs, edge_outputs
 
@@ -124,6 +124,7 @@ class GraphPropLayer(nn.Module):
 
     def __init__(self,
                  node_state_dim,
+                 edge_state_dim,
                  edge_hidden_sizes,  # int
                  node_hidden_sizes,  # int
                  edge_net_init_scale=0.1,
@@ -155,6 +156,7 @@ class GraphPropLayer(nn.Module):
         super(GraphPropLayer, self).__init__()
 
         self._node_state_dim = node_state_dim
+        self._edge_state_dim = edge_state_dim
         self._edge_hidden_sizes = edge_hidden_sizes[:]
 
         # output size is node_state_dim
@@ -175,7 +177,7 @@ class GraphPropLayer(nn.Module):
 
     def build_model(self):
         layer = []
-        layer.append(nn.Linear(self._edge_hidden_sizes[0] + 1, self._edge_hidden_sizes[0]))
+        layer.append(nn.Linear(self._node_state_dim*2 + self._edge_state_dim, self._edge_hidden_sizes[0]))
         for i in range(1, len(self._edge_hidden_sizes)):
             layer.append(nn.ReLU())
             layer.append(nn.Linear(self._edge_hidden_sizes[i - 1], self._edge_hidden_sizes[i]))
@@ -185,7 +187,7 @@ class GraphPropLayer(nn.Module):
         if self._use_reverse_direction:
             if self._reverse_dir_param_different:
                 layer = []
-                layer.append(nn.Linear(self._edge_hidden_sizes[0] + 1, self._edge_hidden_sizes[0]))
+                layer.append(nn.Linear(self._node_state_dim*2 + self._edge_state_dim, self._edge_hidden_sizes[0]))
                 for i in range(1, len(self._edge_hidden_sizes)):
                     layer.append(nn.ReLU())
                     layer.append(nn.Linear(self._edge_hidden_sizes[i - 1], self._edge_hidden_sizes[i]))
@@ -431,6 +433,7 @@ class GraphEmbeddingNet(nn.Module):
                  encoder,
                  aggregator,
                  node_state_dim,
+                 edge_state_dim,
                  edge_hidden_sizes,
                  node_hidden_sizes,
                  n_prop_layers,
@@ -473,6 +476,7 @@ class GraphEmbeddingNet(nn.Module):
         self._encoder = encoder
         self._aggregator = aggregator
         self._node_state_dim = node_state_dim
+        self._edge_state_dim = edge_state_dim
         self._edge_hidden_sizes = edge_hidden_sizes
         self._node_hidden_sizes = node_hidden_sizes
         self._n_prop_layers = n_prop_layers
@@ -492,6 +496,7 @@ class GraphEmbeddingNet(nn.Module):
         """Build one layer in the network."""
         return self._layer_class(
             self._node_state_dim,
+            self._edge_state_dim,
             self._edge_hidden_sizes,
             self._node_hidden_sizes,
             edge_net_init_scale=self._edge_net_init_scale,
