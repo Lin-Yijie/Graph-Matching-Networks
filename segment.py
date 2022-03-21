@@ -41,19 +41,19 @@ def unsorted_segment_sum(data, segment_ids, num_segments):
     # Encourage to use the below code when a deterministic result is
     # needed (reproducibility). However, the code below is with low efficiency.
 
-    # tensor = torch.zeros(num_segments, data.shape[1]).cuda()
+    # tensor = torch.zeros(num_segments, data.shape[1], device=data.device)
     # for index in range(num_segments):
     #     tensor[index, :] = torch.sum(data[segment_ids == index, :], dim=0)
     # return tensor
 
     if len(segment_ids.shape) == 1:
-        s = torch.prod(torch.tensor(data.shape[1:])).long().cuda()
+        s = torch.prod(torch.tensor(data.shape[1:], device=data.device)).long()
         segment_ids = segment_ids.repeat_interleave(s).view(segment_ids.shape[0], *data.shape[1:])
 
     assert data.shape == segment_ids.shape, "data.shape and segment_ids.shape should be equal"
 
     shape = [num_segments] + list(data.shape[1:])
-    tensor = torch.zeros(*shape).cuda().scatter_add(0, segment_ids, data)
+    tensor = torch.zeros(*shape, device=data.device).scatter_add(0, segment_ids, data)
     tensor = tensor.type(data.dtype)
     return tensor
 
