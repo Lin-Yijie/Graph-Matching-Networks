@@ -437,7 +437,7 @@ class Distill_InfoNCE(torch.nn.Module):
             sim_targets = torch.zeros(sim_1to2_m.size()).to(graph1_feat.device)
             sim_targets.fill_diagonal_(1)
 
-            # generate pesudo contrastive labels
+            # generate pseudo contrastive labels
             sim_1to2_targets = alpha * sim_1to2_m + (1 - alpha) * sim_targets
             sim_2to1_targets = alpha * sim_2to1_m + (1 - alpha) * sim_targets
 
