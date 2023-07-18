@@ -31,7 +31,7 @@ In this paper, we introduce a novel and widely existing problem in graph matchin
 As shown below, the inaccurate annotations will inevitably lead to **Bi-level Noisy Correspondence (BNC)** problem. 
 Due to the poor recognizability and viewpoint differences between images, it is inevitable to inaccurately annotate some keypoints with offset and confusion, leading to the mismatch between two associated nodes (NNC). The noisy node-to-node correspondence will further contaminate the edge-to-edge correspondence (ENC).
 
-<img src="https://github.com/Lin-Yijie/Graph-Matching-Networks/tree/main/COMMON/docs/images/nc_example.png" alt="COMMON, ICCV 2023" width="50%">
+<img src="https://github.com/Lin-Yijie/Graph-Matching-Networks/blob/main/COMMON/docs/images/nc_example.png" alt="COMMON, ICCV 2023" width="50%">
 
 
 
