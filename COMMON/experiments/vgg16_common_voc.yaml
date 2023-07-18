@@ -13,7 +13,7 @@ FP16: False
 
 RANDOM_SEED: 66
 
-PRETRAINED_PATH: ./output/vgg16_common_voc/params/params_0017.pt
+#PRETRAINED_PATH: ./output/vgg16_common_voc/params/params_0020.pt
 
 
 # available GPU ids
