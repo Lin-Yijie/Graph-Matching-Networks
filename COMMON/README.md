@@ -5,10 +5,13 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-matching-with-bi-level-noisy/graph-matching-on-willow-object-class)](https://paperswithcode.com/sota/graph-matching-on-willow-object-class?p=graph-matching-with-bi-level-noisy)
 
 
-This repo contains the code and data of our ICCV'2023 paper 
+This repo contains the code and data of our ICCV'2023 paper. Our work has also been included by famous graph matching open-source projects [ThinkMatch](https://github.com/Thinklab-SJTU/ThinkMatch) 
+[![GitHub stars](https://img.shields.io/github/stars/Thinklab-SJTU/ThinkMatch.svg?style=social&label=Star&maxAge=8640)](https://GitHub.com/Thinklab-SJTU/ThinkMatch/). 
 > Yijie Lin, Mouxing Yang, Jun Yu, Peng Hu, Changqing Zhang, Xi Peng. Graph Matching with Bi-level Noisy Correspondence. ICCV, 2023.  [[paper]](https://arxiv.org/pdf/2212.04085.pdf) 
 
-News! Our work has been included by famous graph matching open-source projects [ThinkMatch](https://github.com/Thinklab-SJTU/ThinkMatch)[![GitHub stars](https://img.shields.io/github/stars/Thinklab-SJTU/ThinkMatch.svg?style=social&label=Star&maxAge=8640)](https://GitHub.com/Thinklab-SJTU/ThinkMatch/).
+
+
+
 
 ## Background of Graph Matching
 Graph Matching (GM) is a fundamental yet challenging problem in computer vision, pattern recognition and data mining. GM aims to find node-to-node correspondence among multiple graphs, by solving an NP-hard combinatorial problem named Quadratic Assignment Problem (QAP).
@@ -17,7 +20,7 @@ Graph matching techniques have been applied to the following applications:
 
 * [Image correspondence](https://arxiv.org/pdf/1911.11763.pdf)
   
-  <img src="https://thinkmatch.readthedocs.io/en/latest/_images/superglue.png" alt="Superglue, CVPR 2020" width="50%">
+  <img src="https://thinkmatch.readthedocs.io/en/latest/_images/superglue.png" alt="Superglue, CVPR 2020" width="45%">
 
 * [Molecules matching](https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_Combinatorial_Learning_of_Graph_Edit_Distance_via_Dynamic_Embedding_CVPR_2021_paper.pdf)
 
