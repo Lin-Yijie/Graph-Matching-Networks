@@ -250,6 +250,16 @@ For benchmark results, please refer to https://paperswithcode.com/task/graph-mat
 | ------------------------------------------------------------ | ---- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 | [COMMON](https://arxiv.org/pdf/2212.04085.pdf)    | 2023 | 0.7730 | 0.6820 | 0.9200 | 0.7950 | 0.7040 | 0.9750 | 0.9160 | 0.8250 | 0.7220 | 0.8800 | 0.8000| 0.7410 | 0.8340 | 0.8280 | 0.9990 | 0.8440 | 0.9820 | 0.9980| 0.8450 |
 
+## Credits and Citation
+Please cite the following paper if you use this model in your research:
+```
+@article{lin2023graph,
+  title={Graph Matching with Bi-level Noisy Correspondence},
+  author={Lin, Yijie and Yang, Mouxing and Yu, Jun and Hu, Peng and Zhang, Changqing and Peng, Xi},
+  journal={IEEE International Conference on Computer Vision},
+  year={2023}
+}
+```
 
 ## Acknowledgement
 This repo is built upon the framework of [ThinkMatch](https://github.com/Thinklab-SJTU/ThinkMatch) and the network structure of [BBGM](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123730409.pdf), thanks for their excellent work!
