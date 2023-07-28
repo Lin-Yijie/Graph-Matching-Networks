@@ -257,7 +257,7 @@ Please cite the following paper if you use this model in your research:
 @article{lin2023graph,
   title={Graph Matching with Bi-level Noisy Correspondence},
   author={Lin, Yijie and Yang, Mouxing and Yu, Jun and Hu, Peng and Zhang, Changqing and Peng, Xi},
-  journal={IEEE International Conference on Computer Vision},
+  journal={Proceedings of the IEEE/CVF international conference on computer vision},
   year={2023}
 }
 ```
