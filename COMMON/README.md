@@ -254,10 +254,10 @@ For benchmark results, please refer to https://paperswithcode.com/task/graph-mat
 ## Credits and Citation
 Please cite the following paper if you use this model in your research:
 ```
-@article{lin2023graph,
+@inproceedings{lin2023graph,
   title={Graph Matching with Bi-level Noisy Correspondence},
   author={Lin, Yijie and Yang, Mouxing and Yu, Jun and Hu, Peng and Zhang, Changqing and Peng, Xi},
-  journal={Proceedings of the IEEE/CVF international conference on computer vision},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
   year={2023}
 }
 ```
