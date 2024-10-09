@@ -90,8 +90,8 @@ for i_iter in range(config['training']['n_training_steps']):
 
     graph_vec_scale = torch.mean(graph_vectors ** 2)
     if config['training']['graph_vec_regularizer_weight'] > 0:
-        loss += (config['training']['graph_vec_regularizer_weight'] *
-                 0.5 * graph_vec_scale)
+        loss = loss.add(config['training']['graph_vec_regularizer_weight'] *
+                0.5 * graph_vec_scale)
 
     optimizer.zero_grad()
     loss.backward(torch.ones_like(loss))  #
