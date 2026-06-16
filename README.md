@@ -10,3 +10,4 @@ In this repo, a number of implementations of Graph Matching algorithms are provi
 
 > Yujia Li, Chenjie Gu, Thomas Dullien, Oriol Vinyals, Pushmeet Kohli. *Graph Matching Networks for Learning the Similarity of Graph Structured Objects*. ICML 2019. [[paper\]](https://arxiv.org/abs/1904.12787) [[code\]](https://github.com/Lin-Yijie/Graph-Matching-Networks/tree/main/GMN).
 
+> Yijie Lin, Mouxing Yang, Peng Hu, Jiancheng Lv, Hao Chen, Xi Peng. *Learning with Partial and Noisy Correspondence in Graph Matching*. TPAMI, 2026. The code is available at [Thinklab-SJTU/ThinkMatch](https://github.com/Thinklab-SJTU/ThinkMatch).
